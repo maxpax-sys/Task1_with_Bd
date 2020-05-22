@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Task1_withBd.Models.Guest>
+@{
+    ViewBag.Title = "Все гости";
+}
+<a asp-action="Create">Добавить пользователя</a>
+<table class="table">
+    <tr><td>Имя</td><td>Возраст</td></tr>
+    @foreach (var item in Model)
+    {
+<tr><td>@item.Name</td><td>@item.Email</td><td>@item.Phone</td></tr>
+    }
+</table>
